@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat'),
+     url('./fonts/MontserratAlternates-Regular.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'Montserrat Light';
+  src: local('Montserrat Light'),
+     url('./fonts/MontserratAlternates-Light.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: local('Montserrat Bold'),
+     url('./fonts/MontserratAlternates-SemiBold.ttf') format("truetype");
+}
+
+:root {
+  --manly-pink: #f9e0e0;
+  --sidewalk: rgb(164, 156, 156);
+  --gravel: #252423;
+
+
+  font-family: 'Montserrat', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--manly-pink);
+  background-color: var(--gravel);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/* Style the navigation */
+.navbar {
+  padding: 10px;
+  
+  margin-top: 20px;
+  margin-left: 22px;
+  margin-right: 25px;
+  max-width: 100vw;
+  border-bottom: solid var(--manly-pink) 1px;
+}
+
+/* Style the list */
+.navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around; /* Evenly space out links */
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the individual links */
+.cute-nav-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: var(--manly-pink); /* Neutral text color */
+
+}
+
+/* Add a hover effect */
+.cute-nav-link:hover {
+  color: var(--sidewalk);
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+/* Make links more interactive on active/focus */
+.cute-nav-link:active {
+  transform: translateY(0); /* Push back down when clicked */
+}
+
+/* Style for active links */
+.cute-nav-link.active {
+  background-color: #ad5e10; /* Highlight the active page */
+  color: var(--sidewalk);
+  font-weight: bold;
+}
+#home-page{
+  display: flex;
+  justify-content: space-between;
+}
+#home-bio{
+  width:60vw;
+  padding-top:5vh;
+  padding-left:5vw;
+  padding-right:5vw;
+}
+
+#home-name{
+  margin: 0;
+}
+
+#titles{
+  list-style: none;
+  display: flex;
+  justify-content: space-between; /* Evenly space out links */
+  width: 300px;
+  padding: 0;
+  margin: 0;
+}
+
+#home-bio > p{
+  width: 55vw;
+}
+#preferences{
+  list-style: none;
+  display: flex;
+  justify-content: space-between; /* Evenly space out links */
+  width: 55vw;
+  padding: 0;
+  margin-top: 50px;
+}
