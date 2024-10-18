@@ -1,3 +1,5 @@
+
+/*Importing Personal Fonts*/
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat'),
@@ -13,10 +15,37 @@
   src: local('Montserrat Bold'),
      url('./fonts/MontserratAlternates-SemiBold.ttf') format("truetype");
 }
+@font-face {
+  font-family: 'Manifold';
+  src: local('Manifold'),
+     url('./fonts/Manifold-Extended-CF/Demo_Fonts/Fontspring-DEMO-manifoldextendedcf-regular.otf') format("truetype");
+}
+@font-face {
+  font-family: 'Manifold Bold';
+  src: local('Manifold Bold'),
+     url('./fonts/Manifold-Extended-CF/Demo_Fonts/Fontspring-DEMO-manifoldextendedcf-bold.otf') format("truetype");
+}
+@font-face {
+  font-family: 'Manifold Light';
+  src: local('Manifold Light'),
+     url('./fonts/Manifold-Extended-CF/Demo_Fonts/Fontspring-DEMO-manifoldextendedcf-light.otf') format("truetype");
+}
+@font-face {
+  font-family: 'Manifold Light Italicized';
+  src: local('Manifold Light Italicized'),
+     url('./fonts/Manifold-Extended-CF/Demo_Fonts/Fontspring-DEMO-manifoldextendedcf-lightoblique.otf') format("truetype");
+}
+@font-face {
+  font-family: 'Manifold Italicized';
+  src: local('Manifold Italicized'),
+     url('./fonts/Manifold-Extended-CF/Demo_Fonts/Fontspring-DEMO-manifoldextendedcf-regularoblique.otf') format("truetype");
+}
 
 :root {
+  /*Colors :D*/
   --manly-pink: #f9e0e0;
   --sidewalk: rgb(164, 156, 156);
+  --turf: #363433;
   --gravel: #252423;
 
 
@@ -34,13 +63,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* Building Animations */
+@keyframes movedown {
+  0%   {margin-top: -1080px;}
+  100% {margin-top: 0px;}
 }
-a:hover {
-  color: #535bf2;
+
+@keyframes moveright {
+  0%   {margin-left: -2080px;}
+  100% {margin-left: -280px;}
+}
+
+body{
+  overflow: hidden;
 }
 
 /* Style the navigation */
@@ -52,6 +87,8 @@ a:hover {
   margin-right: 25px;
   max-width: 100vw;
   border-bottom: solid var(--manly-pink) 1px;
+  
+  box-shadow: 0 8px 4px -4px #4b4444;
 }
 
 /* Style the list */
@@ -89,9 +126,18 @@ a:hover {
   color: var(--sidewalk);
   font-weight: bold;
 }
+
+#home-icon{
+  height:20px;
+  width:auto;
+}
+
+
+/* ----------- HOME PAGE STYLING ------------*/
 #home-page{
   display: flex;
   justify-content: space-between;
+  overflow-y: hidden;
 }
 #home-bio{
   width:60vw;
@@ -119,8 +165,154 @@ a:hover {
 #preferences{
   list-style: none;
   display: flex;
-  justify-content: space-between; /* Evenly space out links */
+  justify-content: space-between;
   width: 55vw;
   padding: 0;
   margin-top: 50px;
 }
+.preference:hover{
+  font-size: large;
+  margin-top: -5px;
+}
+
+.photo{
+  height:150px;
+  width: 85px;
+  margin-bottom: 30px;
+  background-color: var(--sidewalk);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px 5px;
+}
+
+.photo:hover{
+  height:160px;
+  width: 95px;
+  margin-bottom: 20px;
+}
+
+.carousel{
+  margin-top: -20px;
+  width: 100px;
+  overflow-x: hidden;
+}
+
+
+#pic-carousel{
+  width: 25vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 6vw;
+
+  animation-name: movedown;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#mid-car{
+  margin-top: -160px;
+}
+
+/* ----------- EXPERIENCE PAGE STYLING ------------*/
+#exp-page{
+  height: 80vh;
+  width: 90vw;
+
+  margin-top: 25px;
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  background-color: var(--turf);
+  border-radius: 20px;
+
+  overflow-y: scroll;
+}
+
+.hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+/* ----------- CONTACT PAGE STYLING ------------*/
+
+#contact-page{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20vw;
+  margin-top: 30px;
+}
+
+#contact-form{
+  display: flex;
+  flex-direction: column;
+
+  height: 40vh;
+  width:50vw;
+  background-color: blanchedalmond;
+
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.horizontal img{
+  height: auto;
+  width:150px;
+}
+
+.horizontal{
+  height:65px;
+  width: 100px;
+  margin-right: 20px;
+  margin-top: 10px;
+
+  background-color: var(--sidewalk);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px 5px;
+}
+
+.horizontal:hover{
+  height:75px;
+  width: 110px;
+  margin-right: 10px;
+  margin-top: 0px;
+}
+#car-hor{
+  height: 100px;
+  width: 10000px;
+  display: flex;
+  flex-direction: row;
+}
+
+
+#pic-car-hor{
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+
+  animation-name: moveright;
+  animation-duration: 45s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+
+
+

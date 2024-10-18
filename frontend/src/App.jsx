@@ -13,6 +13,7 @@ const App = () => {
         {/* Navigation Links */}
         <nav className="navbar">
           <ul className="navbar-list">
+            <li><Link to="/" className="cute-nav-link"><img src="/my_rose.png" alt="" id="home-icon"/></Link></li>
             <li><Link to="/experience" className="cute-nav-link">experience</Link></li>
             <li><Link to="/hobbies" className="cute-nav-link">extra curricular</Link></li>
             <li><Link to="/blog" className="cute-nav-link">the blog</Link></li>
