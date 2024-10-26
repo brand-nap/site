@@ -1,7 +1,7 @@
 import React from 'react';
 import Photo from './Photo';
 
-const Carousel = ({ srcList, id, photoClass = "photo" }) => {
+const Carousel = ({ srcList, id, photoClass = "photo"}) => {
   return (
     <div className='carousel' id={id}>
       {srcList.map((src, index) => (

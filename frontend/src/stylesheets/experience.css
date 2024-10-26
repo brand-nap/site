@@ -1,0 +1,34 @@
+
+/* ----------- EXPERIENCE PAGE STYLING ------------*/
+#exp-page{
+    height: 250px;
+    width: 70vw;
+  
+    margin-top: 50px;
+    margin-left: 100px;
+    padding: 100px;
+  
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  
+    background-image: radial-gradient(var(--turf), var(--pebbles));
+    border-radius: 75px 0px 0px 75px;
+  
+  
+  
+    font-family: 'Radj', 'Montserrat Bold';
+  } 
+  
+  .hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-70%);
+    transition: all 1s;
+  }
+  
+  .show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
