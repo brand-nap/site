@@ -7,6 +7,7 @@ const Contact = () => {
     document.documentElement.style.setProperty('--background', '#473d36');
     document.documentElement.style.setProperty('--drop-select', '#272214');
     document.documentElement.style.setProperty('--drop-down', '#252423');
+    document.documentElement.style.setProperty('---scrollable', 'scroll');
   }, []);
   return (
     <div>

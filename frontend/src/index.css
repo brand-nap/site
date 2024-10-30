@@ -43,6 +43,7 @@
   --drop-select-text: rgb(164, 156, 156);
 
   ---selected: none;
+  ---scrollable: hidden;
 
   font-family: 'Montserrat', system-ui, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -60,7 +61,7 @@
 }
 
 body{
-  overflow-y: hidden;
+  overflow-y: var(---scrollable);
 }
 /* Style the navigation */
 .navbar {

@@ -10,6 +10,7 @@ const Home = () => {
     document.documentElement.style.setProperty('--background', '#252423');
     document.documentElement.style.setProperty('--drop-select', '#565351');
     document.documentElement.style.setProperty('--drop-down', 'rgb(164, 156, 156)');
+    document.documentElement.style.setProperty('---scrollable', 'hidden');
   }, []);
 
   
