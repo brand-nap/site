@@ -40,7 +40,6 @@ const ContBack = () => {
               <input type="text" id="phone" name="number" placeholder="phone no." />
               <textarea id="message" name="message" rows={4} placeholder="message"></textarea>
               <button type="submit" id="form-btn">
-                {" "}
                 send
               </button>
             </form>

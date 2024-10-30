@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react';
-import '../stylesheets/experience.css';
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {

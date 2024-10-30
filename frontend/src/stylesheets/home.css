@@ -153,3 +153,44 @@
   #mid-car{
     margin-top: -160px;
   }
+
+
+  @media screen and (max-width: 1040px){
+    #home-bio{
+      overflow-y: scroll;
+      overflow-x: hidden;
+      height: 83vh;
+    }
+    #preferences{
+      display: none;
+    }
+    #first-car{
+      margin-left: 5vw;
+    }
+    #mid-car{
+      margin-left: 1vw;
+    }
+    #last-car{
+      display: none;
+    }
+
+  }
+  @media (max-width: 910px){
+    #first-car{
+      display: none;
+    }
+    #mid-car{
+      margin-left: 9vw;
+    }
+    #nav-object{
+      display: none;
+    }
+    #drop-object{
+      display: flex;
+    }
+  }
+  @media (max-width: 600px){
+    #mid-car{
+      margin-left: 7vw;
+    }
+  }

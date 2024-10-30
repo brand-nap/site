@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import '../stylesheets/extracurricular.css';
+import "../stylesheets/extracurricular.css";
 
 const ExtraCurricular = () => {
   useEffect(() => {

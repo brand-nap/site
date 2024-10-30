@@ -1,13 +1,14 @@
-import React, {useEffect} from 'react';
-import '../stylesheets/palantir.css';
+import React, {useEffect, useState} from 'react';
+import "../stylesheets/palantir.css";
 
 const Palantir = () => {
   useEffect(() => {
     document.documentElement.style.setProperty('--background', '#000000');
   }, []);
+
   return (
     <div>
-      
+      <p></p>
     </div>
   )
 }

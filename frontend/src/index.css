@@ -3,37 +3,27 @@
 @font-face {
   font-family: 'Montserrat';
   src: local('Montserrat'),
-     url('./fonts/MontserratAlternates-Regular.ttf') format("truetype");
+     url('./fonts/Montserrat/MontserratAlternates-Regular.ttf') format("truetype");
 }
 @font-face {
   font-family: 'Montserrat Light';
   src: local('Montserrat Light'),
-     url('./fonts/MontserratAlternates-Light.ttf') format("truetype");
+     url('./fonts/Montserrat/MontserratAlternates-Light.ttf') format("truetype");
 }
 @font-face {
   font-family: 'Montserrat Bold';
   src: local('Montserrat Bold'),
-     url('./fonts/MontserratAlternates-Medium.ttf') format("truetype");
+     url('./fonts/Montserrat/MontserratAlternates-Medium.ttf') format("truetype");
 }
 @font-face {
   font-family: 'Alliance No. 1';
   src: local('Alliance No. 1'),
-     url('./fonts/alliance/alliance-no-1.otf') format("truetype");
+     url('./fonts/Alliance/alliance-no-1.otf') format("truetype");
 }
 @font-face {
   font-family: 'Corn';
   src: local('Corn'),
-     url('./fonts/Corn_demo/CornDemo-Regular.otf') format("truetype");
-}
-@font-face {
-  font-family: 'Manifold';
-  src: local('Manifold'),
-     url('./fonts/Manifold-Extended-CF/Demo_Fonts/Fontspring-DEMO-manifoldextendedcf-regular.otf') format("truetype");
-}
-@font-face {
-  font-family: 'Raj';
-  src: local('Raj'),
-     url('./fonts/rajdhani/Rajdhani-Regular.ttf') format("truetype");
+     url('./fonts/Corn/CornDemo-Regular.otf') format("truetype");
 }
 
 :root {
@@ -41,13 +31,18 @@
   --manly-pink: #f9e0e0;
   --sidewalk: rgb(164, 156, 156);
   --plank: #755d20;
-  --mud: #413923;
+  --mud: #453f31;
   --oak: #272214;
   --turf: #565351;
   --pebbles: #35312f;
   --gravel: #252423;
   --stone: #1a1918;
   --background: #252423;
+  --drop-down: #252423;
+  --drop-select: #272214;
+  --drop-select-text: rgb(164, 156, 156);
+
+  ---selected: none;
 
   font-family: 'Montserrat', system-ui, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -65,9 +60,8 @@
 }
 
 body{
-  overflow: hidden;
+  overflow-y: hidden;
 }
-
 /* Style the navigation */
 .navbar {
   padding: 10px;
@@ -76,11 +70,10 @@ body{
   margin-left: 22px;
   margin-right: 25px;
   max-width: 100vw;
+  height: 35px;
   border-bottom: solid var(--manly-pink) 1px;
-  
   box-shadow: 0 8px 4px -4px #4b4444;
 }
-
 /* Style the list */
 .navbar-list {
   list-style: none;
@@ -89,14 +82,12 @@ body{
   padding: 0;
   margin: 0;
 }
-
 /* Style the individual links */
 .cute-nav-link {
   text-decoration: none;
   font-size: 16px;
   color: var(--manly-pink); /* Neutral text color */
   margin: 0;
-
 }
 
 /* Add a hover effect */
@@ -104,17 +95,62 @@ body{
   color: var(--sidewalk);
   transition: all .25s;
 }
-
 /* Make links more interactive on active/focus */
 .cute-nav-link:active {
   transform: translateY(0); /* Push back down when clicked */
 }
-
 /* Style for active links */
 .cute-nav-link.active {
   background-color: #ad5e10; /* Highlight the active page */
   color: var(--sidewalk);
   font-weight: bold;
+}
+
+/* Style the dropdown for phones and tablets */
+.dropdown{
+  display: none;
+}
+/* Select button */
+.select{
+  background-color: var(--drop-select);
+  color: var(--drop-select-text);
+  height: 25px;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 1s;
+  z-index: 1000;
+}
+/* list under the select page button */
+.drop-list {
+  margin-top: 24px;
+  margin-left: -175px;
+  display: var(---selected);
+
+  z-index: 999;
+
+  border-radius: 2px;
+  list-style-type: none;
+}
+/* individual list elements */
+.drop-list li {
+  color: var(--turf);
+  background-color: var(--drop-down);
+  height: 30px;
+  width: 120px;
+  margin-bottom: -5px;
+  border-radius: 0px 0px 3px 3px;
+  padding-left: 10px;
+}
+.drop-list li:hover {
+  color: var(--manly-pink);
+  background-color: var(--turf);
+}
+/* links */
+.drop-link{
+  text-decoration: none;
+  text-align: center;
 }
 
 #home-icon{
@@ -126,4 +162,14 @@ body{
   text-decoration: none;
   font-size: 16px;
   color: var(--sidewalk);
+}
+
+@media (max-width: 800px) {
+  .navbar-list{
+    display: none;
+  }
+  .dropdown{
+    display: flex;
+  }
+  
 }
